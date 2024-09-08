@@ -1,0 +1,40 @@
+.btn {
+  padding: 8px 13px;
+  border-radius: 8px;
+}
+
+$buttonThemes: (
+  "primary": (
+    "default": colorTheme("primary"),
+    "hover": colorTheme("primary-hover"),
+    "focus": colorTheme("focus"),
+    "active": colorTheme("active"),
+  ),
+  "danger": (
+    "default": colorTheme("danger"),
+    "hover": colorTheme("danger-hover"),
+    "focus": colorTheme("focus"),
+    "active": colorTheme("active"),
+  ),
+  "tertiary": (
+    "default": colorTheme("tertiary"),
+    "hover": colorTheme("tertiary-hover"),
+    "focus": colorTheme("focus"),
+    "active": colorTheme("active"),
+  ),
+);
+
+@each $key, $color in $buttonThemes {
+  .btn-#{$key} {
+    background-color: map-get($color, "default");
+    &:hover {
+      background-color: map-get($color, "hover");
+    }
+    &:active {
+      background-color: map-get($color, "active");
+    }
+    &:focus {
+      background-color: map-get($color, "focus");
+    }
+  }
+}

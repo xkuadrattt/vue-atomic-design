@@ -15,3 +15,7 @@ export type ParagraphUi = {
   leading?: string;
   className?: string;
 };
+
+export type AvatarUi = {
+  src?: string;
+};
