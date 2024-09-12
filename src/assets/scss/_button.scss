@@ -37,4 +37,10 @@ $buttonThemes: (
       background-color: map-get($color, "focus");
     }
   }
+  input[data-variant="#{$key}"] {
+    border: 1px solid map-get($color, "default");
+    &:focus {
+      background-color: map-get($color, "focus");
+    }
+  }
 }

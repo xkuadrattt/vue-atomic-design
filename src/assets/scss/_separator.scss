@@ -1,0 +1,10 @@
+.separator {
+  &:before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    width: 2px;
+    height: 16px;
+    background-color: colorTheme("border");
+  }
+}
